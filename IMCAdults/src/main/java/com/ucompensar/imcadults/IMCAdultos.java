@@ -36,13 +36,13 @@ public class IMCAdultos extends javax.swing.JFrame {
         jTextPeso = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextPeso1 = new javax.swing.JTextField();
+        jTextEstat = new javax.swing.JTextField();
         jButtonCalcIMC = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jTextIMC = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextIMC1 = new javax.swing.JTextField();
+        jTextNivelPeso = new javax.swing.JTextField();
         jButtonSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,17 +84,17 @@ public class IMCAdultos extends javax.swing.JFrame {
         jLabel2.setText("Estatura :");
 
         jLabel3.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
-        jLabel3.setText("M");
+        jLabel3.setText("Kg");
 
         jTextPeso.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
-        jLabel4.setText("Kg");
+        jLabel4.setText("M");
 
         jLabel5.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jLabel5.setText("Peso :");
 
-        jTextPeso1.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
+        jTextEstat.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
 
         jButtonCalcIMC.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jButtonCalcIMC.setText("Calcular IMC");
@@ -114,19 +114,22 @@ public class IMCAdultos extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextPeso1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextEstat, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4))
+                        .addComponent(jLabel4)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButtonCalcIMC, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3)))
-                .addContainerGap(126, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                                .addComponent(jTextPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButtonCalcIMC, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addGap(118, 118, 118))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,16 +138,16 @@ public class IMCAdultos extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextPeso1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextEstat, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(32, 32, 32)
+                .addGap(33, 33, 33)
                 .addComponent(jButtonCalcIMC, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
+                .addGap(58, 58, 58))
         );
 
         jPanel3.setBackground(new java.awt.Color(204, 255, 204));
@@ -159,9 +162,9 @@ public class IMCAdultos extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         jLabel8.setText("Su IMC es de :");
 
-        jTextIMC1.setEditable(false);
-        jTextIMC1.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
-        jTextIMC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextNivelPeso.setEditable(false);
+        jTextNivelPeso.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
+        jTextNivelPeso.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jButtonSalir.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jButtonSalir.setText("Salir");
@@ -189,7 +192,7 @@ public class IMCAdultos extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jTextIMC1))))
+                            .addComponent(jTextNivelPeso))))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -202,7 +205,7 @@ public class IMCAdultos extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextIMC1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextNivelPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -241,10 +244,27 @@ public class IMCAdultos extends javax.swing.JFrame {
     private void jButtonCalcIMCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcIMCActionPerformed
         // TODO add your handling code here:
         double estatura, peso, imc;
+        estatura = Double.parseDouble(jTextEstat.getText());
+        peso = Double.parseDouble(jTextPeso.getText());
+        imc = (peso / (Math.pow(estatura, 2)));
+        System.out.println(imc);
+        jTextIMC.setText(String.valueOf(imc));
+        if (imc >= 18.5) {
+            if (imc >= 18.5 && imc <= 24.9) {
+                jTextNivelPeso.setText(String.valueOf("Peso Normal"));
+            } else if (imc >= 25 && imc <= 29.9) {
+                jTextNivelPeso.setText(String.valueOf("Esta en SobrePeso"));
+            } else if (imc > 30) {
+                jTextNivelPeso.setText(String.valueOf("Esta Obeso"));
+            }
+        } else {
+            jTextNivelPeso.setText(String.valueOf("Bajo de peso"));
+        }
     }//GEN-LAST:event_jButtonCalcIMCActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
         // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
@@ -296,9 +316,9 @@ public class IMCAdultos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jTextEstat;
     private javax.swing.JTextField jTextIMC;
-    private javax.swing.JTextField jTextIMC1;
+    private javax.swing.JTextField jTextNivelPeso;
     private javax.swing.JTextField jTextPeso;
-    private javax.swing.JTextField jTextPeso1;
     // End of variables declaration//GEN-END:variables
 }
